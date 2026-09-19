@@ -1,5 +1,7 @@
 # Azure FinOps Assessment Toolkit
 
+**Client overview:** [Client-facing case study](./CASE-STUDY.md)
+
 A production-oriented PowerShell toolkit for assessing Azure cost, resource state, governance, and financial accountability across one or more subscriptions.
 
 The toolkit inventories the live Azure estate, retrieves Azure Cost Management actual-cost data, reconciles billing records against Azure Resource Manager resources, verifies suspected deleted resources, evaluates tagging coverage, performs financial tie-out checks, and produces an executive-ready assessment.
