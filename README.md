@@ -2,6 +2,46 @@
 
 **Client overview:** [Client-facing case study](./CASE-STUDY.md)
 
+## Outcome & Evidence
+
+| Evidence | Result |
+|---|---|
+| Enabled subscriptions assessed | 2 |
+| Current ARM resources | 15 |
+| Current resource types | 11 |
+| Month-to-date actual cost | 4.5931 CAD |
+| Active spend | 0.0000 CAD |
+| Historical / deleted spend | 4.5931 CAD |
+| Unmapped spend | 0.0000 CAD |
+| Reconciliation checks | 10 / 10 passed |
+| Largest validated cost driver | Deleted Azure VPN Gateway, 98.7% of MTD spend |
+| Governance finding | 0 of 15 live resources carried all required CostCenter, Owner, and Environment tags |
+
+**Proof:** [View the executive sample PDF](./sample-output/Azure-FinOps-Executive-Assessment-Sample.pdf) · [Read the case study](./CASE-STUDY.md)
+
+## Architecture at a glance
+
+```mermaid
+flowchart LR
+    A[Azure CLI / Assessment Identity] --> B[Enabled Subscriptions]
+    B --> C[ARM Live Resource Inventory]
+    B --> D[Azure Cost Management Cost Details]
+    C --> E[Normalize Resource Identities]
+    D --> E
+    E --> F{Reconcile Billing to Live Estate}
+    F --> G[Current]
+    F --> H[Historical / Deleted]
+    F --> I[Unmapped]
+    H --> J[Direct Resource-ID Verification]
+    G --> K[Tag & Governance Assessment]
+    J --> K
+    I --> K
+    K --> L[Financial Tie-out Checks]
+    L --> M[Executive HTML / PDF Report]
+```
+
+---
+
 A production-oriented PowerShell toolkit for assessing Azure cost, resource state, governance, and financial accountability across one or more subscriptions.
 
 The toolkit inventories the live Azure estate, retrieves Azure Cost Management actual-cost data, reconciles billing records against Azure Resource Manager resources, verifies suspected deleted resources, evaluates tagging coverage, performs financial tie-out checks, and produces an executive-ready assessment.
