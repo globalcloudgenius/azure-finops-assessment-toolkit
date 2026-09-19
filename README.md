@@ -8,6 +8,15 @@ It is designed for cloud architects, FinOps practitioners, platform engineers, A
 
 > **What are we paying for in Azure, what still exists, what has been deleted, who owns the cost, and can the numbers be trusted?**
 
+
+## Client-ready sample
+
+**View the finished assessment:** [Azure FinOps Executive Assessment - Sample PDF](./sample-output/Azure-FinOps-Executive-Assessment-Sample.pdf)
+
+The sample demonstrates the end-to-end deliverable: live Azure inventory, Cost Management reconciliation, deleted-resource verification, governance findings, executive actions, and financial tie-out checks.
+
+**Consulting inquiries:** advisory@cloudgenius.ca · https://cloudgenius.ca
+
 ---
 
 ## Why this project exists
